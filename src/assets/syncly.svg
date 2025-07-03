@@ -1,0 +1,44 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background circle with vibrant gradient -->
+    <defs>
+        <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00C9FF"/>
+            <stop offset="100%" style="stop-color:#92FE9D"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- Main circle with gradient and subtle shadow -->
+    <circle cx="100" cy="100" r="90" fill="none" stroke="url(#circleGradient)" stroke-width="8"/>
+    
+    <!-- Workflow nodes and connections with vibrant styling -->
+    <g>
+        <!-- Node 1 -->
+        <circle cx="70" cy="60" r="15" fill="#FF6B6B"/>
+        
+        <!-- Node 2 -->
+        <circle cx="130" cy="100" r="15" fill="#FFD93D"/>
+        
+        <!-- Node 3 -->
+        <circle cx="70" cy="140" r="15" fill="#6BCB77"/>
+        
+        <!-- Connection lines with rounded caps and vibrant color -->
+        <path 
+            d="M 85 60 L 115 100
+                 M 115 100 L 85 140"
+            stroke="#4D96FF" 
+            stroke-width="8"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
+    </g>
+    
+    <!-- Enhanced AI suggestion indicator with vibrant color -->
+    <path
+        d="M 145 100 A 15 15 0 1 1 115 100"
+        fill="none"
+        stroke="#FF6B6B"
+        stroke-width="4"
+        stroke-dasharray="4,4"
+    />
+</svg>
