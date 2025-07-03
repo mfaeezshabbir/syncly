@@ -105,6 +105,6 @@ Contributions are welcome! Please open an issue or pull request to discuss your 
 ## 👤 Authors
 
 - [Muhammad Faeez Shabbir](https://github.com/mfaeezshabbir)
-- [Contributors](https://github.com/your-org/syncly/graphs/contributors)
+- [Contributors](https://github.com/mfaeezshabbir/syncly/graphs/contributors)
 
 ---

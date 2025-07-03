@@ -1,6 +1,6 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
-interface WorkflowStep {
+export interface WorkflowStep {
   id: string;
   type: string;
   position: { x: number; y: number };
@@ -18,22 +18,28 @@ interface WorkflowState {
   connections: Connection[];
   addStep: (step: WorkflowStep) => void;
   updateStepPosition: (id: string, position: { x: number; y: number }) => void;
+  updateStepConfig: (id: string, config: Record<string, unknown>) => void;
   addConnection: (connection: Connection) => void;
   removeStep: (id: string) => void;
   removeConnection: (id: string) => void;
 }
 
-import { StateCreator } from 'zustand';
-
 export const useWorkflowStore = create<WorkflowState>((set) => ({
   steps: [],
   connections: [],
-  addStep: (step) =>
-    set((state) => ({ steps: [...state.steps, step] })),
+  addStep: (step) => set((state) => ({ steps: [...state.steps, step] })),
   updateStepPosition: (id, position) =>
     set((state) => ({
       steps: state.steps.map((step) =>
         step.id === id ? { ...step, position } : step
+      ),
+    })),
+  updateStepConfig: (id, config) =>
+    set((state) => ({
+      steps: state.steps.map((step) =>
+        step.id === id
+          ? { ...step, config: { ...step.config, ...config } }
+          : step
       ),
     })),
   addConnection: (connection) =>
