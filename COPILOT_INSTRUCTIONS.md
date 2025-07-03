@@ -21,7 +21,7 @@ Welcome to the Syncly codebase! These instructions are designed to help GitHub C
 
 ### UI/UX
 
-- Use the `'Inter'` font for typography.
+- Use the `'Roboto'` font for typography.
 - Prioritize accessibility (a11y) and keyboard navigation.
 - Ensure drag-and-drop actions are intuitive and visually indicated.
 - Use consistent iconography (line icons related to automation and workflow).
